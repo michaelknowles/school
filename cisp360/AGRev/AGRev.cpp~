@@ -1,0 +1,52 @@
+/*
+    Al Gore's Revenge
+    Calculate the effects of climate change
+    CISP360
+    Michael Knowles
+    September 9, 2017
+*/
+
+#include <iostream>
+
+void welcome() {
+  // Display a welcome message at program start
+  std::cout << "Exploration of the changing weather.\n";
+}
+
+float convertToInches() {
+  // Convert from mm to inches
+  // 1 mm = 0.1 cm = 0.03937 in
+  float inches;
+  return inches;
+}
+
+float calcPastOceanRaise() {
+  // Specification 1
+  // Compute how much the world's oceans rose over the last 100 years
+  std::cout << "The world's oceans rose over the last 100 years, by\n"
+	    << inches << " inches or "
+	    << cms << " centimeters\n";
+}
+
+float calcFutureOceanRise() {
+  // Specification 2
+  // Compute how much the oceans will rise over the next 15/30 years
+}
+
+float calcFutureTemps() {
+  // Specification 2
+  // Compute how much the mean July temps will increase over the next 15/30 years
+}
+
+int main() {
+  // Variables
+  const float oceanRiseInPastCentury = 1.8; // mm
+  const float oceanRisePerYear = 3.1;       // mm
+  const int tempNewYorkCity = 85;           // F in July
+  const int tempDenver = 88;                // F in July
+  const int tempPhoenix = 106;              // F in July
+  const int tempSacramento = 92;            // F in July
+  const float tempIncrease = 0.02;          // % over 15 years
+
+  return 0;
+}

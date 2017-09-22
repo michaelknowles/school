@@ -1,0 +1,79 @@
+/*
+    Drake Equation
+    The Drake equation in C++
+    CISP360
+    Michael Knowles
+    September 7, 2017
+*/
+
+#include <iostream>
+
+void welcome() {
+  /* 
+     Print a welcome message at program start.
+  */
+  std::cout << "This program calculates the number of potential civilizations using "
+    "the Drake equation.\n";
+}
+
+void displayVariables(int R, float p, float n, float f, float i, float c, float L) {
+  /*
+    Print what all the variables are and their values.
+  */
+  std::cout << "Variables:\n"
+    "Rate of star creation: " << R << "\n"
+    "Percentage of stars with planets: " << p << "\n"
+    "Average number of planets that can potentially support life for each star "
+    "with planets: " << n << "\n"
+    "Percentage of those that go on to develop life: " << f << "\n"
+    "Percentage of those that go on to intelligent life: " << i << "\n"
+    "Percentage of those willing and able to communicate: " << c << "\n"
+    "Expected lifetime of civilizations: " << L << "\n";
+}
+
+float calculateDrake(int R, float p, float n, float f, float i, float c, float L) {
+  /*
+    Calculate the Drake equation.
+  */
+  float answer = R * p * n * f * i * c * L;
+  return answer;
+}
+
+int main() {
+  /*
+    The Drake equation
+    N = R * p * n * f * i * c * L
+  */
+  // Variables
+  const int starCreationRate = 7;                // R
+  const float percentStarsWithPlanets = 0.4;     // p
+  const float averagePlanets = 0.9;              // n
+  const float percentLifePlanets = 0.13;         // f
+  const float percentIntelligentPlanets = 0.5;   // i
+  const float percentCommunicatingPlanets = 0.8; // c
+  const float civilizationLifetime = 10000;      // L
+
+  welcome();
+
+  displayVariables(starCreationRate,
+		   percentStarsWithPlanets,
+		   averagePlanets,
+		   percentLifePlanets,
+		   percentIntelligentPlanets,
+		   percentCommunicatingPlanets,
+		   civilizationLifetime);
+
+  float answer = calculateDrake(starCreationRate,
+			  percentStarsWithPlanets,
+			  averagePlanets,
+			  percentLifePlanets,
+			  percentIntelligentPlanets,
+			  percentCommunicatingPlanets,
+			  civilizationLifetime);
+
+  std::cout << "Results\n"
+    "Estimated number of detectable civilizations in the universe.\n"
+    << answer << "\n";
+
+  return 0;
+}
