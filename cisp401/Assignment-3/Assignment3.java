@@ -3,10 +3,10 @@ import Employee.Employee;
 /**
  * Michael Knowles
  * CISP401
- * Program Assignment 2b
+ * Program Assignment 3
  */
 
-public class Assignment2b {
+public class Assignment3 {
    
     private static void printHeader() {
         /*
