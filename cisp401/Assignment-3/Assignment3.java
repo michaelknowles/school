@@ -26,12 +26,12 @@ public class Assignment3 {
          * Print the info for an employee formatted for the report
          */
         System.out.printf("%-17s%8.2f%8.2f%9.2f%8.2f%9.2f\n",
-                          employee.name,
-                          employee.rate,
-                          employee.hours,
-                          employee.gross,
-                          employee.tax,
-                          employee.net);
+                          employee.getName(),
+                          employee.getRate(),
+                          employee.getHours(),
+                          employee.getGross(),
+                          employee.getTax(),
+                          employee.getNet());
     }
 
     public static void main(String[] args) {     
@@ -52,22 +52,22 @@ public class Assignment3 {
          */
         Employee totals = new Employee("Totals", 0, 0);
         for(int i = 0; i < employeeCount; i++) {
-            totals.rate += employees[i].rate;
-            totals.hours += employees[i].hours;
-            totals.gross += employees[i].gross;
-            totals.tax += employees[i].tax;
-            totals.net += employees[i].net;
+            totals.rate += employees[i].getRate();
+            totals.hours += employees[i].getHours();
+            totals.gross += employees[i].getGross();
+            totals.tax += employees[i].getTax();
+            totals.net += employees[i].getNet();
         }
         
         /*
          * Average values from all employees
          */
         Employee averages = new Employee("Averages", 
-            totals.rate / employeeCount, 
-            totals.hours / employeeCount,
-            totals.gross / employeeCount,
-            totals.tax / employeeCount,
-            totals.net / employeeCount);
+            totals.getRate() / employeeCount, 
+            totals.getHours() / employeeCount,
+            totals.getGross() / employeeCount,
+            totals.getTax() / employeeCount,
+            totals.getNet() / employeeCount);
         
         /*
          * Begin output

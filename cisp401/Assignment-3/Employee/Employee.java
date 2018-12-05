@@ -10,12 +10,12 @@ public class Employee {
      /* 
       * Variables
       */
-     public String name;
-     public double rate;
-     public double hours;
-     public double gross;
-     public double tax;
-     public double net;
+     private String name;
+     private double rate;
+     private double hours;
+     private double gross;
+     private double tax;
+     private double net;
      
      /* 
       * Constructor given only name, rate, and hours
@@ -74,4 +74,30 @@ public class Employee {
          // net = gross - tax
          return gross - tax;
      }
+
+     /*
+      * Getters
+      */
+    public String getName() {
+        return name;
+    }
+    public double getRate() {
+        return rate;
+    }
+    public double getHours() {
+        return hours;
+    }
+    public double getGross() {
+        return gross;
+    }
+    public double getTax() {
+        return tax;
+    }
+    public double getNet() {
+        return net;
+    }
+    hours
+    gross
+    tax
+    net
  }
