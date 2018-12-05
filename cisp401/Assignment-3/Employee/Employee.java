@@ -96,8 +96,27 @@ public class Employee {
     public double getNet() {
         return net;
     }
-    hours
-    gross
-    tax
-    net
- }
+
+    /*
+     * Setters
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+    public void setGross(double gross) {
+        this.gross = gross;
+    }
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+    public void setNet(double net) {
+        this.net = net;
+    }
+
+}
