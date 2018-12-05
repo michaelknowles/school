@@ -10,12 +10,13 @@ public class Employee {
      /* 
       * Variables
       */
-     private String name;
-     private double rate;
-     private double hours;
-     private double gross;
-     private double tax;
-     private double net;
+     protected String name;
+     protected String type;
+     protected double rate;
+     protected double hours;
+     protected double gross;
+     protected double tax;
+     protected double net;
      
      /* 
       * Constructor given only name, rate, and hours
@@ -118,5 +119,12 @@ public class Employee {
     public void setNet(double net) {
         this.net = net;
     }
+}
 
+class EmployeeSalaried extends Employee {
+    type = "Salaried";
+    
+    private double calcGross() {
+        return hours * rate;
+    }
 }

@@ -52,11 +52,11 @@ public class Assignment3 {
          */
         Employee totals = new Employee("Totals", 0, 0);
         for(int i = 0; i < employeeCount; i++) {
-            totals.rate += employees[i].getRate();
-            totals.hours += employees[i].getHours();
-            totals.gross += employees[i].getGross();
-            totals.tax += employees[i].getTax();
-            totals.net += employees[i].getNet();
+            totals.setRate(totals.getRate() + employees[i].getRate());
+            totals.setHours(totals.getHours() + employees[i].getHours());
+            totals.setGross(totals.getGross() + employees[i].getGross());
+            totals.setTax(totals.getTax() + employees[i].getTax());
+            totals.setNet(totals.getNet() + employees[i].getNet());
         }
         
         /*
